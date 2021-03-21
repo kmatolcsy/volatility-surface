@@ -9,6 +9,9 @@ from option_chain import OptionChain
 from black_scholes import vol_surface
 from models import DumasFlemingWhaley
 from utils import make_dir, update_repo, send_notification
+from secrets import conf
+
+qd.ApiConfig.api_key = conf.get('api_key')
 
 
 def interpolate(df, method='linear'):
